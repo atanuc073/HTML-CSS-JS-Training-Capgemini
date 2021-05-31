@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<b>Atanu Chowdhury</b><br>
+<i>Kolkata</i><br>
+<u>1234567</u><br>
+H<sub>2</sub>O<br>
+a<sup>2</sup>b<br>
+<pre>
+public class Test{
+	public void m1(){
+    	System.out.Println("Hello");
+    }
+}
+</pre>
+
+</body>
+</html>
+
+
+========================
+Table
+=========================
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<table border="0" cellpadding="10" cellspacing="0" bgcolor="yellow">
+	<tr bgcolor="orange">
+    	<td>Name</td>
+        <td>Salary</td>
+        <td>Designation</td>
+        <br>
+    </tr>
+    <tr>
+    	<td>Atanu</td>
+        <td>500000</td>
+        <td>CEO</td>
+        <br>
+    </tr>
+    <tr>
+    	<td>Ankan</td>
+        <td>400000</td>
+        <td>CTO</td>
+        <br>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">Total Salary</td>
+        <td>60000</td>
+        <br>
+    </tr>
+</table>
+
+</body>
+</html>

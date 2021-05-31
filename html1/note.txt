@@ -1,0 +1,13 @@
+HTML5
+    Semantics tags
+    Audio video
+    DataSuggestion
+Semantic tags
+It is equivalent to <div> tag but gives more readability
+<header>
+<footer>
+<aside>
+<nav>
+<article>
+<section>
+
