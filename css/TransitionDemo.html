@@ -5,7 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Font CSS Demo</title>
     <style>
-         
+        article{
+            display: flex;
+            flex-wrap: wrap;
+            width : 70%;
+            justify-content: center;
+            margin: auto;
+        }
+        article section{
+            height: 200px;
+            width: 200px;
+            border: 1px solid red;
+            margin: 10px;
+            text-align: center;
+            padding: 10px;
+
+        }
+        article section img{
+            height: 180px;
+            width: 210px;
+            transition: transform 2s;
+        }
+        #i1:hover{
+            transform: rotate(60deg);
+        }
+        #i2:hover{
+            transform: rotateX(180deg)
+        }
+        #i3:hover{
+            transform: rotateY(180deg);
+        }
+        #i4:hover{
+            transform: scale(1.5,1.5);
+        }
+        #i5:hover{
+            transform: scale(0.5,0.5);
+        }
+        #i6:hover{
+            transform: skew(60deg);
+        }
     </style>  
 </head>
 <body>

@@ -1,0 +1,31 @@
+header,footer{
+    padding: 10px;
+    text-align: center;
+    background: -webkit-linear-gradient(left,yellow,orange,green,yellow);
+}
+#mtitle{
+    color: red;
+    text-shadow: 5px,5px,5px,black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 25px;
+}
+article{
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 400px;
+
+}
+aside{
+    background-color: burlywood;
+    border: 1px solid red;
+
+}
+aside img{
+    border-radius: 50px;
+    height: 200px;
+
+}
+article section{
+    width: 70%;
+}
+
