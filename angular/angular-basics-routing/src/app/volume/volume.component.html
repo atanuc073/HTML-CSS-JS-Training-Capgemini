@@ -1,0 +1,25 @@
+<section class="col-4 m-2">
+  <h2>Volume</h2>
+  <table class="table table-primary">
+    <tr>
+      <td>Radius</td>
+      <td><input type="number" [(ngModel)]="radius" placeholder="Enter Radius" name="txtradius"/></td>
+    </tr>
+    <!-- [(ngModel)] is a two way binding available FormsModule library-->
+    <tr>
+      <td>Height</td>
+      <td><input type="number" [(ngModel)]="height" placeholder="Enter Height" name="txtheight"/></td>
+    </tr>
+
+    <tr>
+      <td>Result</td>
+      <!--Interpolation one waybinding using {{}} component to template-->
+      <td>{{res}}</td>
+    </tr>
+    <tr>
+      <!-- Event one way binding using () template to component-->
+      <td><input type="button" (click)="calcVolumeOfCone()" value="coneVolume" class="btn-danger"/></td>
+      <td><input type="button" (click)="calcVolumeOfCylinder()" value="cylinderVolume" class="btn-warning"/></td>
+    </tr>
+  </table>
+</section>

@@ -19,7 +19,7 @@ export class CalculatorComponent implements OnInit {
 
   }
   calcCompound():void{
-    this.res=(this.amt*Math.pow((1+this.rate)/100.0,this.years)-this.amt).toFixed(2);
+    this.res=(this.amt*Math.pow(1+(this.rate/100.0),this.years)-this.amt).toFixed(2);
 
   }
 

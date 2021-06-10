@@ -1,0 +1,35 @@
+<section class="col-4 m-2">
+  <h2>SharedBill</h2>
+  <table class="table table-primary">
+    <tr>
+      <td>Total Bill Cost</td>
+      <td><input type="number" [(ngModel)]="totalcost" placeholder="Enter Bill Cost" name="txtbillcost"/></td>
+    </tr>
+    <!-- [(ngModel)] is a two way binding available FormsModule library-->
+    <tr>
+      <td>Tip Percentage</td>
+      <td><input type="number" [(ngModel)]="tipper" placeholder="Enter Tip Percentage" name="txttippercent"/></td>
+    </tr>
+    <tr>
+      <td>No Of Persons</td>
+      <td><input type="number" [(ngModel)]="noofpersons" placeholder="Number of Persons" name="txtnoperson"/></td>
+    </tr>
+    <tr>
+      <td>Tip Per Person</td>
+      <!--Interpolation one waybinding using {{}} component to template-->
+      <td>{{tipsperperson}}</td>
+    </tr>
+
+    <tr>
+      <td>Total Cost</td>
+      <!--Interpolation one waybinding using {{}} component to template-->
+      <td>{{totalperperson}}</td>
+    </tr>
+    <tr>
+      <!-- Event one way binding using () template to component-->
+      <td colspan="2" class="text-center"><input type="button" (click)="calcTotalCostPerPerson()" value="Cost" class="btn-danger"/></td>
+      
+    </tr>
+  </table>
+</section>
+
