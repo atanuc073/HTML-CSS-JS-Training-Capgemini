@@ -1,0 +1,28 @@
+<section class=col-4>
+  <h2>Calculator</h2>
+  <table class="table table-primary col-4 mx-auto">
+    <tr>
+      <td>Amount</td>
+      <td><input type="number" [(ngModel)]="amt" placeholder="Enter Amount" name="txtamt"/></td>
+    </tr>
+    <!-- [(ngModel)] is a two way binding available FormsModule library-->
+    <tr>
+      <td>Years</td>
+      <td><input type="number" [(ngModel)]="years" placeholder="Enter Years" name="txtyears"/></td>
+    </tr>
+    <tr>
+      <td>Rate</td>
+      <td><input type="number" [(ngModel)]="rate" placeholder="Enter Rate" name="txtrate"/></td>
+    </tr>
+    <tr>
+      <td>Result</td>
+      <!--Interpolation one waybinding using {{}} component to template-->
+      <td>{{res}}</td>
+    </tr>
+    <tr>
+      <!-- Event one way binding using () template to component-->
+      <td><input type="button" (click)="calcSimple()" value="calcSimple" class="btn-danger"/></td>
+      <td><input type="button" (click)="calcCompound()" value="calcCompound" class="btn-warning"/></td>
+    </tr>
+  </table>
+</section>
