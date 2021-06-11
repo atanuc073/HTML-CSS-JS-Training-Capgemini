@@ -6,6 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-basics-routing';
-  imgname ="../assets/mobile12.jpg";
+  title = 'angular-service-pipe-form';
 }

@@ -1,8 +1,19 @@
 <header class="jumbotron text-center">
-  <h1 class="text-center">Basics And Routing</h1>
+  <h1 class="text-center"><img [src]="imgname" height="50px" width=80px/>Basics And Routing</h1>
+  
 </header>
-<article style="display: flex;">
+<!-- <article style="display: flex;">
   <app-calculator></app-calculator>
   <app-volume></app-volume>
   <app-sharedbill></app-sharedbill>
+</article> -->
+<article>
+  <nav class="col-6 bg-dark text-white p-1 mx-auto justify-content-center">
+    <a routerLink="calc" class="m-2 text-white">Calculator</a>
+    <a routerLink="volume" class="m-2 text-white">Volume</a>
+    <a routerLink="bill" class="m-2 text-white">Bill Share</a>
+  </nav>
+
+  <!-- router-outlet show the Component -->
+  <router-outlet></router-outlet>
 </article>
