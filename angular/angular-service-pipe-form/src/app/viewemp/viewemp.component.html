@@ -1,18 +1,25 @@
-<section class="col-4 bg-warning mx-auto p-1 m-1">
+<section class="col-8 bg-warning mx-auto p-2 m-1">
   <h2>ViewEmp</h2>
-  <table class="table table-primary table-striped table-hover">
+  <div class="text-center">
+    <input class="form-control" type="text" [(ngModel)]="searchstr"/>
+  </div>
+  <table class="table table-primary table-striped table-hover ">
     <tr>
-      <th>Employee Id</th>
-      <th>Employee Name</th>
-      <th>Salary</th>
-      <th>Department</th>
+      <th ><a (click)="setfield('empId')">Employee Id</a></th>
+      <th><a (click)="setfield('empName')">Employee Name</a></th>
+      <th><a (click)="setfield('empSal')">Salary</a></th>
+      <th><a (click)="setfield('empdept')">Department</a></th>
+      <th><a (click)="setfield('empSal')">PF</a></th>
+      <th><a (click)="setfield('empSal')">Net Salary</a></th>
 
     </tr>
-    <tr *ngFor="let e of empservice.emps">
+    <tr *ngFor="let e of empservice.emps | searchby:searchstr | sortby:field">
       <td>{{e.empId}}</td>
-      <td>{{e.empName}}</td>
-      <td>{{e.empSal}}</td>
-      <td>{{e.empdept}}</td>
+      <td>{{e.empName | titlecase}}</td>
+      <td>{{e.empSal | currency:'INR'}}</td>
+      <td>{{e.empdept | uppercase}}</td>
+      <td>{{(e.empSal | pf) | currency:'INR' }}</td>
+      <td>{{e.empSal-(e.empSal | pf) | currency:'INR'}}</td>
 
     </tr>
 

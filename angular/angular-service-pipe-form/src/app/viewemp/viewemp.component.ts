@@ -7,10 +7,15 @@ import { EmpService } from '../emp.service';
   styleUrls: ['./viewemp.component.css']
 })
 export class ViewempComponent implements OnInit {
+  searchstr:string="";
+  field:string="";
 
   constructor(public empservice:EmpService) { }
 
   ngOnInit() {
+  }
+  setfield(field:string):void{
+    this.field=field;
   }
 
 }

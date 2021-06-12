@@ -8,6 +8,8 @@ import { ViewempComponent } from './viewemp/viewemp.component';
 import { PfPipe } from './pf.pipe';
 import { FormsModule } from '@angular/forms';
 import { EmpService } from './emp.service';
+import { SearchbyPipe } from './searchby.pipe';
+import { SortbyPipe } from './sortby.pipe';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { EmpService } from './emp.service';
     AddempComponent,
     ViewempComponent,
     PfPipe,
+    SearchbyPipe,
+    SortbyPipe,
   ],
   imports: [
     BrowserModule,
