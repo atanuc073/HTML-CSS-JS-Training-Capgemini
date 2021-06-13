@@ -1,6 +1,6 @@
 <section class="col-4  mx-auto card card-primary m-1 p-1">
   <div class="alert alert-success">{{msg}}</div>
-  <form #frm="ngForm" (ngSubmit)="add()">
+  <form #frm="ngForm" (ngSubmit)="edit()">
     <div>Employee Id</div>
     <div><input type="number" class="form-control" name="txtid" [(ngModel)]='emp.empId' #eid="ngModel" required/></div>
     <div *ngIf="eid.invalid && eid.touched" class="alert alert-danger">Employee Id is Required</div>
@@ -23,7 +23,7 @@
       <div *ngIf="edept.errors.pattern">Department can be either HR or PR</div>
     </div>
 
-    <input type="submit" value="addemployee" [disabled]="!frm.valid"/>
+    <input type="submit" value="EditEmployee" [disabled]="!frm.valid"/>
   </form>
 
 </section>

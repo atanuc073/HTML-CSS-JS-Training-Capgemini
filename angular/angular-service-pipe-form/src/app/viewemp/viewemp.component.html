@@ -5,12 +5,14 @@
   </div>
   <table class="table table-primary table-striped table-hover ">
     <tr>
-      <th ><a (click)="setfield('empId')">Employee Id</a></th>
+      <th><a (click)="setfield('empId')">Employee Id</a></th>
       <th><a (click)="setfield('empName')">Employee Name</a></th>
       <th><a (click)="setfield('empSal')">Salary</a></th>
       <th><a (click)="setfield('empdept')">Department</a></th>
       <th><a (click)="setfield('empSal')">PF</a></th>
       <th><a (click)="setfield('empSal')">Net Salary</a></th>
+      <th>Remove</th>
+      <th>Edit</th>
 
     </tr>
     <tr *ngFor="let e of empservice.emps | searchby:searchstr | sortby:field">
@@ -20,7 +22,8 @@
       <td>{{e.empdept | uppercase}}</td>
       <td>{{(e.empSal | pf) | currency:'INR' }}</td>
       <td>{{e.empSal-(e.empSal | pf) | currency:'INR'}}</td>
-
+      <td><input type="button" class="btn-danger" value="remove"(click)="empservice.removeEmployee(e.empId)"/></td>
+      <td><input type="button" class="btn-warning" value="edit" routerLink="/editemp/{{e.empId }}" /></td>
     </tr>
 
   </table>

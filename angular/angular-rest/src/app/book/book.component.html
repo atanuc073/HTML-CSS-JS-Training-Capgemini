@@ -1,0 +1,16 @@
+<section class="col-5 mx-auto p-1 m-1">
+  <table class="table table-primary table-striped table-hovered">
+  <tr>
+    <th >Book Id</th>
+    <th >Title</th>
+    <th >Cost</th>
+    <th >Author</th>
+  </tr>
+  <tr *ngFor="let b of books">
+    <td>{{b.id}}</td>
+    <td>{{b.title | titlecase}}</td>
+    <td>{{b.cost | currency: 'INR'}}</td>
+    <td>{{b.author | uppercase}}</td>
+  </tr>
+  </table>
+</section>

@@ -18,5 +18,12 @@ export class EmpService {
     this.emps.push({empId:1019,empName:"ravan",empSal:700000,empdept:"hr"});
     this.emps.push({empId:1012,empName:"mohit",empSal:300000,empdept:"pr"});
    }
+   addEmployee(emp:Empdto):void{
+     this.emps.push(emp);
+
+   }
+   removeEmployee(eid:number):void{
+     this.emps=this.emps.filter(e=>e.empId != eid);
+   }
 
 }

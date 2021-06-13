@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { EmpService } from './emp.service';
 import { SearchbyPipe } from './searchby.pipe';
 import { SortbyPipe } from './sortby.pipe';
+import { EditempComponent } from './editemp/editemp.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { SortbyPipe } from './sortby.pipe';
     PfPipe,
     SearchbyPipe,
     SortbyPipe,
+    EditempComponent,
   ],
   imports: [
     BrowserModule,

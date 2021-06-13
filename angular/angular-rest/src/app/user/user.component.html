@@ -1,0 +1,34 @@
+<section class="col-5 mx-auto">
+  <h2>Browser User Info</h2>
+  <div>User Id</div>
+  <div><input type="number"[(ngModel)]="userid"/></div>
+  <div><input type="button" value="Search" (click)="getusers()"/></div>
+  <div *ngIf="msg!=undefined" class="alert alert-danger">{{msg}}</div>
+  <table class="table table-primary table-striped table-hovered" *ngIf="users!=undefined">
+    <tr>
+      <td>User Id</td>
+      <td>{{users.id}}</td>
+    </tr>
+    <tr>
+      <td>User Name</td>
+      <td>{{users.username}}</td>
+    </tr>
+    <tr>
+      <td>User FullName</td>
+      <td>{{users.name}}</td>
+    </tr>
+    <tr>
+      <td>User Email</td>
+      <td>{{users.email}}</td>
+    </tr>
+    <tr>
+      <td>City</td>
+      <td>{{users.address.city}}</td>
+    </tr>
+    <tr>
+      <td>Company</td>
+      <td>{{users.company.name}}</td>
+    </tr>
+  </table>
+
+</section>
