@@ -1,0 +1,6 @@
+<section class="col-5 mx-auto m-2 p-2 bg-warning" [ngStyle]="{height:'200px'}">
+<h2>Parent 2</h2>
+  <div appHighlight>{{str}}</div>
+
+</section>
+<app-child2 (notify)="handleEvent($event)"></app-child2>

@@ -1,0 +1,32 @@
+<section class="col-6 mx-auto p-1 m-1 ">
+
+    <div class="alert alert-success" *ngIf="msg!=null" [ngStyle]="{'background-color': msgflag?'green':'red'}">{{msg}}</div>
+
+    <form #frm="ngForm" (ngSubmit)="addEmployee()" class="bg bg-info form form-control mx-auto">
+        <div >Employee Name</div>
+        <div><input type="text" class="from-control" [(ngModel)]="emp.empName" name="txtname" #ename="ngModel" required pattern="^[A-Za-z\s]{1,}[A-za-z\s]{0,}$"></div>
+        <div *ngIf="ename.invalid && ename.touched" class="alert alert-danger">
+            <div *ngIf="ename.errors.required">Employee Name Is Invalid</div>
+            <div *ngIf="ename.errors.pattern">employee Name Must Contain alphabets and can have space in between</div>
+        </div>
+
+        <div>Employee Salary</div>
+        <div><input type="number" class="from-control" [(ngModel)]="emp.empSal" name="txtsal" #esal="ngModel" required></div>
+        <div *ngIf="esal.invalid && esal.touched" class="alert alert-danger">Salary is Mandatory</div>
+
+        <div>date Of Joining</div>
+        <div><input type="date" class="from-control" [(ngModel)]="emp.doj" name="txtdoj" #edoj="ngModel" required></div>
+        <div *ngIf="edoj.invalid && edoj.touched" class="alert alert-danger">Date Of Joining is Required.</div>
+    
+        <div>Department</div>
+        <div><input type="text" class="from-control" [(ngModel)]="emp.deptName" name="txtdept" #edept="ngModel" required pattern="hr|production"></div>
+        <div *ngIf="edept.invalid && edept.touched" class="alert alert-danger">
+            <div *ngIf="edept.errors.required">Department is Required</div>
+            <div *ngIf="edept.errors.pattern">Department must be hr or production</div>
+        </div>
+
+        <input type="submit" value="addemployee" [disabled]="!frm.valid"/>
+    </form>
+
+
+</section>
